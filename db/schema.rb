@@ -22,14 +22,6 @@ ActiveRecord::Schema.define(version: 20150831211908) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "computers", force: :cascade do |t|
-    t.string   "brand"
-    t.string   "type"
-    t.string   "color"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "laptops", force: :cascade do |t|
     t.string   "brand"
     t.string   "size"
@@ -39,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150831211908) do
   end
 
   create_table "robots", force: :cascade do |t|
+    t.integer  "cart_id"
     t.string   "name"
     t.string   "origin"
     t.string   "function"
